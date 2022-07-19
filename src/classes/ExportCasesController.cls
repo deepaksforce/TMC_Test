@@ -6,6 +6,8 @@ public with sharing class ExportCasesController {
         List<Case> cases = new List<Case>();
         cases = [SELECT CaseNumber,Id,Status FROM Case WHERE CaseNumber LIKE:caseNumber LIMIT 5];
         System.debug(cases);
+        
+        
     }
     public static List<Case> getCasesByAccountId(Id accountId) {
         List<Case> casesWithAccount = new List<Case>();
